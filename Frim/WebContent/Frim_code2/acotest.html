@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="ko-kr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <title> Bootstrap web page(캐러셀과 아이콘) </title>
+		
+	<!-- 네비바 메뉴 링크 설정 및 링크 이동시 스크롤링 효과주기
+		 1) CSS3 애니메이션 파일 링크 : line 23
+		 2) 특수효과(스클로링, 애이메이션 등)를 위한 플러그인 설정 : line 662~666
+		 3) <body>태그에 스크롤 스파이 설정 : line 190
+		 4) 네비바 메뉴 링크 설정 : line 211~214
+		 5) .about, .portfolio, .contact 상하 패딩 처리 및 nav-fix로 인한 헤더고정 부분 공백 처리 : line 123~124
+		 
+    -->
+	
+    <!-- Bootstrap -->
+    <link href="css/nomalize.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- 모달 윈도우 처리를 위해 fancybox 처리를 위한 jquery.fancybox.css 파일 링크  -->
+    <link href="css/jquery.fancybox.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet"><!-- CSS3 애니메이션 파일 -->
+    
+    <!-- Custom css 설정 -->
+  
+    <style>
+    	  /* 네비게이션바에서 사용되는 폰트를 구글 웹 폰트로 설정 */ 
+	      @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400);
+	      @font-face{/* 글꼴 지정 : 나눔바른고딕 */
+		      font-family:'NanumBarunGothic';
+		      src:url("fonts/NanumBarunGothic.eot");
+		      src:local("☺"),url("fonts/NanumBarunGothic.woff") format("woff");
+	      }
+	      a:hover { text-decoration: none;}/* 네비바 마우스 오버시 스타일 지정 */      
+	      body {font-family: "NanumBarunGothic",  sans-serif; 
+	            padding-top: 90px; }/* 캐러셀 이미지가 고정된 네비바에 가리는 부분 해결 */  
+	      .container-fluid { padding: 0;}
+	      
+	      /* 네비게이션바 스타일 설정 */
+	      .navbar{ background-color: #fff; border: none; padding-bottom: 10px;  
+	      font-family: 'Source Sans Pro', sans-serif; font-weight: 300; font-size: 18px;height: 90px; 
+	      text-transform: capitalize; border-bottom: 1px solid #AAAAAA}
+	
+	      .navbar-toggle {position: relative;margin-top: 30px; top: 2px;}
+	      .navbar-nav { padding-right: 10px;margin-top: 20px; background-color: #fff}
+	      .navbar-nav li { margin:0 20px; }
+	      .navbar-brand { padding-left: 20px;}  
+	      .navbar-collapse { padding-top: 10px; background-color: #fff}
+	      
+	      /* 네비바 메뉴 마우스 오버 및 활성화 상태일 때 스타일 지정 */
+	      .navbar-default .navbar-nav>li>a:hover { color: #FF8000} 
+	      .navbar-default .navbar-nav>li.active>a,
+	      .navbar-default .navbar-nav>li.active>a:hover,
+	      .navbar-default .navbar-nav>li.active>a:focus { color: #FF8000; background-color: #fff} 
+	      /* 캐러셀 컨트롤 이미지(이전-다음페이지) 스타일 지정*/
+	      .control { position: inherit; top: 50%; z-index: 5; display: inline-block; right: 50%;} 
+	      
+	      /* 해상도가 최대 320픽셀인 경우 로고 이미지 크기를 줄이고 상단 마진값(margin-top:-100px)을 조정하여 위로 올림 */ 
+	      @media (max-width: 320px)  { 
+	      	.navbar-brand img { width: 80%; height: auto; margin-top:-100px}  
+      	  }
+      	  
+      	  /* 최대 해상도가 980픽셀일 때 각 메뉴사이의 간격을 10픽셀로 조정 */
+      	  @media (max-width: 980px) {
+        	.navbar-nav li { margin:0 10px;}
+      	  }	
+
+		  /* 아이콘 부분 스타일 지정 */
+		  .service {margin: 40px 0;} /* 캐러셀과 아이콘 사이의 간격을 조정(상하간격) */
+		  .service a { display: block;}/* .service 클래스의 a 태그 속성을 block로 지정 */
+		  .icons { /* 아이콘에 스타일 지정 */     
+		         float: left;
+		         display: block;
+		         font-size: 30px;
+		         color: #fff;
+		         background-color: #FF8000;
+		         border-radius: 50%;/* 사각형을 원형으로 변경 */
+		         text-align: center;
+		         margin-right: 15px ;
+		         padding: 20px;
+		         border:4px solid #FF8040;
+		         transition: all 0.3s;
+		        }  
+		        
+		  .service a:hover .icons  { background-color:#0080C0;}/* 아이콘에 마우스 오버시 색샹 변경 */
+		 
+		  /* 아이콘 제목에 마우스 오버시 색샹 변경 */ 		 
+		  .service a:hover .icontxt h4 { color: #0080FF; }
+		  
+		  /* icontxt 클래스 부분 스타일 지정 */
+          .icontxt { display: block; color: #2E2F28; text-align: left; } 
+          
+           /* icontxt 클래스의 제목(h4) 스타일 지정 */
+          .icontxt h4 {font-weight: bold; font-family: 'Source Sans Pro'; font-size: 20px; 
+                       text-transform: uppercase; text-align: left;}
+                       
+          /* 해상도가 768픽셀 이하인 경우 아이콘과 제목 정렬 */
+	      @media (min-width: 768px) {
+		      .icons { margin: 0 auto; position: relative; left: 30%;}
+		      .icontxt h4 { text-align: center;}
+	      }
+	
+	      /* 최대 해상도가 360픽셀인 경우 텍스트가 사라지게 스타일 지정 */
+	      @media (max-width: 360px) {
+		      .icontxt p { display: none; }
+		      .icontxt {line-height:10px; padding: 0; margin: 0;}
+		      .icontxt h4 { display: none; }
+		      .icons { padding: 20px; margin: 10px 0 10px 20px; }
+		      .book img { width: 50%; height: auto;}
+		      .control { display: none;} 
+	      }
+	      
+	      /* About 부분 스타일 지정 */
+	      header { color: #fff; text-align: center; padding: 40px 0;}/* 헤더 텍스트 처리 */
+	      header small { color: #fff}
+	      header p { color: #C0C0C0}  
+	          
+	      .content1 {/* 헤더 부분 백그라운드 처리 */
+		      background:url(img/slide1_bg.jpg)  no-repeat center top fixed;
+		      background-size:cover; 
+	      }
+	      .about p { line-height: 1.8em; font-size: 15px; color: #282923}
+		  .about, .portfolio, .contact { padding: 50px 0;}/* .about, .portfolio, .contact 클래스 상하 패딩 설정  */
+          #about, #portfolio, #contact { margin-top: -85px; padding-top: 85px } /*  nav-fix 때문에 생기는 공백 상쇄 */
+	      /* 컬랩스 부분에 대한 속성 적용*/
+	      .panel a {  display: block; color: #000}
+	      .panel a.collapsed { color: #0080C0 }
+	      .panel-body { color:#804000}
+	
+	      /* 책 부분에 대한 속성 적용*/
+	      .book{ margin-left: 10px;}
+	      .book2, .book3, .book4 { position: relative; float: left; }
+	      .book2 { z-index: 1; }
+	      .book3 { z-index: 10; margin-left: -100px; }
+	      .book4 { z-index: 20; margin-left: -100px;}  
+	      
+
+		  /*포트폴리오 헤더 부분 */
+	      .content2 {
+		      background:url(img/slide1_bg.jpg)  no-repeat center center fixed;
+		      background-size:cover; 
+	      }
+	      /*포트폴리오 사이트 부분 */
+         .site { height: 330px;}/* 각 사이트 클래스 선택자 높이 지정 */
+         .site h4 { border-bottom: 1px solid #C0C0C0; font-size: 16px; padding-bottom: 5px }
+         
+         
+         /* Contact 와 footer 부분 */
+		 .contact { padding: 50px 0;}
+		
+		 .content3 {
+		    background:url(img/slide1_bg.jpg)  no-repeat center bottom fixed;
+		    background-size:cover; 
+		 }
+		
+		 .form-group input[type="text"], .form-group textarea { border-radius: 0;}
+		
+		 .required {
+		    background: url(img/required.png) right top no-repeat;
+		 }
+		
+		 button.send_btn {
+		    cursor: pointer;
+		    background:url(img/pattern.png) repeat;
+		    color: #FFF;
+		    margin:0 10px 0 0;
+		    display: inline-block;
+		    padding: 0 20px;
+		    height:40px;
+		    line-height:40px;
+		    font-size: 14px;
+		    width: auto;
+		    border:0;
+		 }
+		 button.send_btn:hover {
+		     background-image:url(img/color_pattern.png);
+		     text-decoration:none;
+		 }
+		.result-wrapper{width : 300px ; height :300px ; }
+		#result-image {width : 100px ; height :100px ;background-size : contain} 
+		 footer { padding: 40px 0; color: #fff}
+		 
+		 
+
+		 
+		 
+		 
+    </style>
+    
+  </head>
+<body id="home" data-spy="scroll" data-target="#navbar-scroll" data-offset="50">
+   <div class="container-fluid"><!-- 전체 화면 -->
+    <!-- 인풋 버튼 -->
+ 				 <input type="text" id = "weather_in">
+	            <button>검색</button>
+      <!-- About 부분 시작-->
+      <div id="about"></div><!-- 네비바에서 About을 눌렀을 경우 이동할 위치 지정-->
+      
+     
+      <div class="container about" ><!-- about start-->
+      	
+     
+        <hr>       
+         <!-- About 하단 부분을 그리드 레이아웃으로 영역 설정 -->  
+         <div class="row"><!--About 하단 부분 row 시작-->
+           <div class="col-md-12"><!-- col-md-12(1) 시작 --> <!--12로 수정-->
+             <!-- 어코디언(컬랩스) -->
+               <h3> 정보들 </h3>
+                <div class="panel-group" id="accordion"><!-- 어코디언(컬랩스)가 적용되는 부분을 그룹을 묶음 -->
+                	
+                	<!-- 개별 어코디언(컬랩스)선언(첫번째 어코디언) 설명 -->
+                    <div class="panel">
+                      <!-- 어코디언(컬랩스)은 panel-heading과 panel-body로 구분 -->
+                      
+                      <div class="panel-heading"><!-- 헤딩(panel-heading) 선언 -->
+                        <h4 class="panel-title"><!-- 제목(타이틀) 선언() -->
+                        	<!-- 컬랩스를 작동해 주는 링크 설정
+                        	     - 링크설정시 data-toggle="collapse"를 적용해야 하며,
+                        	     - data-parent="#accordion" : 현재 컬랩스의 부모 id 선택자 지정
+                        	     - href="#collapseOne" : panel-body에 선언된 id를 링크로 설정 -->
+                          <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                            <span class="glyphicon glyphicon-star"> </span> 설명
+                          </a>
+                        </h4>
+                      </div>
+                      
+                      <!-- 바디(panel-body) 선언
+                      	   - id를 지정하고, class="panel-collapse collapse)"로 지정하고, 
+                      	   - .in클래스를 추가해서 첫 부분에 해당하는 컬랩스만 펼쳐있게 처리 --> 
+                      <div id="collapseOne" class="panel-collapse collapse in">
+                        <div class="panel-body">
+                              하단 사진, 동영상, 날씨를 누르면 자세히 볼 수 있습니다
+			
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <!-- 개별 어코디언(컬랩스)선언(두번째 어코디언) 사진 -->
+                    <div class="panel">
+                      <div class="panel-heading">
+                        <h4 class="panel-title">
+                          <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                            <span class="glyphicon glyphicon-star"> </span> 사진
+                          </a>
+                        </h4>
+                      </div>
+                      <div id="collapseTwo" class="panel-collapse collapse ">
+                        <div class="panel-body">
+                            <div class="row">
+             <div class="col-xs-3 col-md-3">
+                <div class="thumbnail">
+                  <a class="fancybox" rel="gallery2" href="img/portfolio/design1.jpg">
+                   <img src="img/portfolio/design1.jpg" alt="">
+                  </a> 
+                </div> 
+             </div>
+             <div class="col-xs-3 col-md-3">
+                <div class="thumbnail">
+                  <a class="fancybox" rel="gallery2" href="img/portfolio/design2.jpg">
+                   <img src="img/portfolio/design2.jpg" alt="">
+                  </a> 
+                </div>  
+             </div>
+             <div class="col-xs-3 col-md-3">
+              <div class="thumbnail">
+                <a class="fancybox" rel="gallery2" href="img/portfolio/design3.jpg">
+                  <img src="img/portfolio/design3.jpg" alt="">
+                </a>
+              </div>  
+             </div>
+             <div class="col-xs-3 col-md-3">
+              <div class="thumbnail">
+                <a class="fancybox" rel="gallery2" href="img/portfolio/design4.jpg">
+                  <img src="img/portfolio/design4.jpg" alt="">
+                </a>
+              </div>  
+             </div>
+           </div> 
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <!-- 개별 어코디언(컬랩스)선언(세번째 어코디언) 동영상 -->
+                    <div class="panel">
+                      <div class="panel-heading">
+                        <h4 class="panel-title">
+                          <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                            <span class="glyphicon glyphicon-star"> </span> 동영상
+                          </a>
+                        </h4>
+                      </div>
+                      <div id="collapseThree" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <div class="row">
+             <div class="col-xs-3 col-md-3">
+                <div class="thumbnail">
+                  <iframe  src="https://www.youtube.com/embed/a4IosLAbLXY" frameborder="0" allowfullscreen=""></iframe>
+                  
+               
+                  </a> 
+                </div> 
+             </div>
+             <div class="col-xs-3 col-md-3">
+                <div class="thumbnail">
+                     <iframe  src="https://www.youtube.com/embed/ZHoLaLlL5lA" frameborder="0" allowfullscreen></iframe>
+                  </a> 
+                </div>  
+             </div>
+             <div class="col-xs-3 col-md-3">
+              <div class="thumbnail">
+                <iframe src="https://www.youtube.com/embed/OX8PNEkUX68" frameborder="0" allowfullscreen></iframe>
+                </a>
+              </div>  
+             </div>
+             <div class="col-xs-3 col-md-3">
+              <div class="thumbnail">
+               <iframe  src="https://www.youtube.com/embed/ePpPVE-GGJw" frameborder="0" allowfullscreen></iframe>
+                </a>
+              </div>  
+             </div>
+           </div>          
+                        </div>
+                      </div>
+                    </div>
+                    
+                   <!-- 개별 어코디언(컬랩스)선언(네번째 어코디언) 날씨-->
+                   <div class="panel">
+                      <div class="panel-heading">
+                        <h4 class="panel-title">
+                          <a data-toggle="collapse" data-parent="#accordion" href="#collapsefour">
+                            <span class="glyphicon glyphicon-star"> </span> 날씨
+                          </a>
+                        </h4>
+                      </div>
+                      <div id="collapsefour" class="panel-collapse collapse ">
+                        <div class="panel-body">
+                             
+                             
+                           <div class="weather">
+	   	<div class = "mw">
+	        <div class="input-wrapper">
+	            
+	            
+	        </div>
+	        
+	        <div class="result-weather"> 
+	        	<img  id="result-image" src="img/clear.png" alt=""> 
+	        <div id="weather-info">
+				<!-- Script -->
+			</div>
+	        </div>
+	     
+	    </section>
+	
+		<!-- Script -->
+	   	<script type="text/javascript" src="js/custom1.js"></script>
+	
+	      </div>  
+                             
+                             
+                             
+                        </div>
+                      </div>
+                    </div> 
+                    
+                                                   
+                </div>
+             <!-- 어코디언 끝 -->          
+           </div><!-- col-md-12(1) 끝 -->
+         </div><!--About 하단 부분 row 끝-->
+       </div>  <!-- about end-->
+       
+    
+      
+      </footer> 
+    
+  </div> 
+  
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- jquery.fancybox.js -->
+    <script src="js/jquery.fancybox.js"></script>
+    <script src="js/bootstrap-hover-dropdown.js"></script>
+    <script src="js/animatescroll.min.js"></script>
+    <script src="js/simpleparallax.js"></script>    
+    <script> // 날씨 
+    $(document).ready(function () {
+    $("button").click(function () {
+        var city = $("#weather_in").val();
+		var appid = "9d89590fff1ef68bceab0fca85ef70a4";//변경
+        var url = "http://api.openweathermap.org/data/2.5/weather?q=" + 
+                         city + "&mode=json&units=metric&appid=" + appid;
+		
+		$.get(url, function(data, status) {
+			console.log(data);
+			var result = data.name + "의 날씨는 " +data.main.temp + "도 입니다.";
+			$("#weather-info").html(result);
+		
+		});
+		
+		$.ajax({
+			url:url,
+			dataType:"jsonp",
+			type:"get",
+			success:function(data){
+				console.log(data);
+				var icon;
+				switch(data.weather[0].description)
+				{
+					case "few clouds":
+						icon="02d.png";
+						break;
+					case "light rain":
+						icon="10d.png";
+						break;
+					default:
+						icon="13n.png";
+						break;
+				}
+		
+				$("#result-image").attr("src", "http://openweathermap.org/img/w/"+icon);
+  
+			}
+		});
+    });
+});
+</script>
+    <script>
+        /* 캐러셀을 작동하기 위한 스크립트 선언 */
+      	$('.carousel').carousel();
+      	
+      	$('.carousel2').carousel({interval: 3000 }); 
+      	
+	    //* fancybox  실행 스크립트 */
+	    $(document).ready(function() {
+	        $(".fancybox").fancybox({
+		          openEffect  : 'none',
+		          closeEffect : 'none'
+	        });
+	     });
+    </script>
+</body>
+</html>

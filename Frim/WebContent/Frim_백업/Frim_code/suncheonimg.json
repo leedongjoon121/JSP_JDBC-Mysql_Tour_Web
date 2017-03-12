@@ -1,0 +1,13 @@
+
+{
+	"img" : [
+	
+		{"no": "1","link":"img/portfolio/food5.JPG", "title":"순천 맛집 1" , "content":"한식 뷔페 061-000-0000"}, 
+	    {"no": "2","link":"img/portfolio/food6.jpg", "title":"순천 맛집 2" , "content":"꼬치구이 061-000-0000"}, 
+	    {"no": "3","link":"img/portfolio/hotel5.jpg", "title":"순천 호텔1" , "content":"호텔 "}, 
+		{"no": "4","link":"img/portfolio/hotel6.JPG", "title":"순천 호텔2", "content":"에코그라드 호텔"},
+		{"no": "5","link":"img/portfolio/suncheon1.jpg", "title":"순천만" , "content":"순천만 야경"},
+		{"no": "6","link":"img/portfolio/suncheon2.jpg", "title":"순천 정원" , "content":"순천만 정원 A"}
+	  ]  
+
+}	

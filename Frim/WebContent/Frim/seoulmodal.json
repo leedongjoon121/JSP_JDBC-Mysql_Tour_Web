@@ -1,0 +1,19 @@
+
+{
+	"modal" : [
+	
+		{"no":"1", "title":"대가 해장국", "comment":"강남에서 최고로 맛있다고 알려진 대가 해장국" ,  "img": "img/portfolio/food1.JPG" , "content":"둘이 먹다 하나 죽어도 모른다는 전설의 해장국이며 소주한잔을 불러일으키는 맛입니다"}, 
+	    {"no":"2", "title":"용삼이 곱창", "comment":"저렴한 가격!, 맛은 당연보장!! 청춘들이여 모여라!!" ,  "img": "img/portfolio/food2.jpg" , "content":"곱창이 비싸다고? NO!!!, 저렴한 가격에 최고의 맛을 선사할수 있는 용삼이 곱창"},
+	    {"no":"3", "title":"엠버서티", "comment":"강남역을 대표하는 엠버서터 호텔입니다." ,  "img": "img/portfolio/hotel1.jpg" , "content":"연인과의 즐거운 시간을 보내고 싶으시다면 강남 엄버서티 호텔로 오세요!"},
+	    {"no":"4", "title":"람다호텔", "comment":"강남역 최고의 서비스를 자랑하는 람다 호텔" ,  "img": "img/portfolio/hotel2.jpg" , "content":"가족과 함께 최고의 환경에서 즐거운 시간을 보내고 싶다면 람다 호텔로 오세요!"},
+	    {"no":"5", "title":"대한민국의 중심 강남역 입니다.", "comment":"대한민국의 중심 강남!" ,  "img": "img/portfolio/gangnam1.jpg" , "content":"대한민국을 이끌어가는 강남의 대표 지역!"},
+	    {"no":"6", "title":"강남역", "comment":"대한민국 1등 지하철역 강남역!" ,  "img": "img/portfolio/gangnam2.jpg" , "content":"강남역의 모습입니다. 역인데 아주 아름답고 깔끔한 디자인을 자랑 합니다."}
+	  ]  
+
+}	
+
+
+
+
+
+ 

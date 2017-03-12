@@ -1,0 +1,13 @@
+
+{
+	"img" : [
+	
+		{"no": "1","link":"img/portfolio/food1.JPG", "title":"대가 해장국" , "content":"강남 맛집 대가 해장국"}, 
+	    {"no": "2","link":"img/portfolio/food2.jpg", "title":"용삼이 곱창" , "content":"저렴한 가격의 용삼이 곱창"}, 
+	    {"no": "3","link":"img/portfolio/hotel1.jpg", "title":"엠버서티" , "content":"최고의 서비스 엠버서티"}, 
+		{"no": "4","link":"img/portfolio/hotel2.jpg", "title":"람다호텔" , "content":"최고의 서비스람다호텔"},
+		{"no": "5","link":"img/portfolio/gangnam1.jpg", "title":"강남도시" , "content":"대한민국의 중심 강남"},
+		{"no": "6","link":"img/portfolio/gangnam2.jpg", "title":"강남역" , "content":"강남의 중심 강남역"}
+	  ]  
+
+}	

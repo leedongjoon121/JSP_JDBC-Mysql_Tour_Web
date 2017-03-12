@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Geocoding service</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        height: 100%;
+      }
+#floating-panel {
+  position: absolute;
+  top: 10px;
+  left: 25%;
+  z-index: 5;
+  background-color: #fff;
+  padding: 5px;
+  border: 1px solid #999;
+  text-align: center;
+  font-family: 'Roboto','sans-serif';
+  line-height: 30px;
+  padding-left: 10px;
+}
+
+    </style>
+  </head>
+  <body>
+    <div id="floating-panel">
+      <input id="address" type="textbox" value="....지역을 입력해주세요">
+      <input id="submit" type="button" value="Geocode">
+    </div>
+    <div id="map"></div>
+    <script>
+    
+    
+function initMap() {
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 15,
+    center: {lat: 37.498138, lng: 127.027610}
+    
+  });
+  
+  var geocoder = new google.maps.Geocoder();
+
+  document.getElementById('submit').addEventListener('click', function() {
+    geocodeAddress(geocoder, map);
+  });
+}
+
+function geocodeAddress(geocoder, resultsMap) {
+  var address = document.getElementById('address').value;
+  geocoder.geocode({'address': address}, function(results, status) {
+    if (status === google.maps.GeocoderStatus.OK) {
+      resultsMap.setCenter(results[0].geometry.location);
+      var marker = new google.maps.Marker({
+        map: resultsMap,
+        position: results[0].geometry.location
+       
+      });
+      switch(address) {
+         case '서울' :
+         
+         
+         var marker2 = new google.maps.Marker({
+        map: resultsMap,
+        position: new google.maps.LatLng(' 37.498138', '127.027700'),
+        title: '강남1' 
+      });
+      var content = "서울 <br/> 지하철 타러 가자~";
+       var infowindow = new google.maps.InfoWindow({ content: content});
+        google.maps.event.addListener(marker2, "click", function() {
+            infowindow.open(map,marker2);
+        });
+        
+         break;
+         
+         case '수원' :
+         
+         var marker3 = new google.maps.Marker({
+        map: resultsMap,
+        position: new google.maps.LatLng('37.266833','127.002370'),
+        title: '수원' 
+      });
+      var content = "수원 <br/> 아..이동준~";
+       var infowindow = new google.maps.InfoWindow({ content: content});
+        google.maps.event.addListener(marker3, "click", function() {
+            infowindow.open(map,marker3);
+        });
+         break;
+         
+         case '순천' :
+         
+         var marker4 = new google.maps.Marker({
+        map: resultsMap,
+        position: new google.maps.LatLng('34.946000','127.503239'),
+        title: '순천' 
+      });
+      var content4 = "순천  <br/> 지하철 타러 가자~없네";
+       var infowindow4 = new google.maps.InfoWindow({ content: content4});
+        google.maps.event.addListener(marker4, "click", function() {
+            infowindow4.open(map,marker4);
+        });
+        
+        var marker5 = new google.maps.Marker({
+        map: resultsMap,
+        position: new google.maps.LatLng('34.146000','127.503239'),
+        title: '순천' 
+      });
+      var content5 = "동준이   <br/> 수레기";
+       var infowindow5 = new google.maps.InfoWindow({ content: content5});
+        google.maps.event.addListener(marker5, "click", function() {
+            infowindow5.open(map,marker5);
+        });
+        var marker6 = new google.maps.Marker({
+        map: resultsMap,
+        position: new google.maps.LatLng('34.936000','127.503239'),
+        title: '순천' 
+      });
+      var content6 = "푸하하하하  <br/> ㅋㅋㅋㅋㅋㅋ";
+       var infowindow6 = new google.maps.InfoWindow({ content: content6});
+        google.maps.event.addListener(marker6, "click", function() {
+            infowindow6.open(map,marker6);
+        });
+         break;
+      }
+      
+      
+    } else {
+      alert('Geocode was not successful for the following reason: ' + status);
+    }
+  });
+}
+
+    </script>
+     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDL3NkhtvzhA_SCaz9gk9Q_KwjotdZEIOI&callback=initMap"
+        ></script>
+  </body>
+</html>
+   
+  

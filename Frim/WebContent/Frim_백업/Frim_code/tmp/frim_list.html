@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+<script src="//code.jquery.com/jquery.min.js"></script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>frim data list</title>
+<style>
+div #img_view{width:200px ; height:200px}
+</style>
+<script>
+	function requestImg(view,item)
+	{
+		$.ajax({
+			url : item.val(),
+			success:function(){
+				console.log("잇는파일");
+				view.append("<img src='"+item.val()+"'/>")
+			
+			},
+			error:function(){
+				console.log("없어안돼 저리가");
+				requestImg(view,item);
+			}
+		});
+	}
+	
+   $(document).ready(function(){
+	   
+	 var view =  $('#img_view');
+	 $.ajax({
+		 url:"frim_addrlist.jsp",
+		 datatype:"html",
+		 success:function(data){
+			view.html(data);
+			console.log(data);
+			$.each($("input"),function(index,item){
+				var $item = $(item);
+				var flag = true;
+				requestImg(view,$item);			
+			});
+		 }
+	 });
+   });
+ </script>
+
+</head>
+
+ 
+<body>
+<div align="center"> 
+<H2>주소록:목록화면</H2>
+
+<HR>
+
+		<div id = "img_view">
+			
+		</div>
+</div>
+</body>
+</html>

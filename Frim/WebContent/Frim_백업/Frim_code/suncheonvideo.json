@@ -1,0 +1,11 @@
+
+{
+	"video" : [
+	
+		{"link":"https://www.youtube.com/embed/0BHHr1w_n0s", "title":"순천 video 1" , "content":"살기 좋은 도시 순천"}, 
+	    {"link":"https://www.youtube.com/embed/AAefcx9t15o", "title":"순천 video 2" , "content":"여학생 4명 순천여행"}, 
+	    {"link":"https://www.youtube.com/embed/2orT96CcI4s", "title":"순천 video 3" , "content":"낙악읍성, 드라마촬영장, 순천만"}, 
+		{"link":"https://www.youtube.com/embed/5c-E9msL8vg", "title":"순천 video 4" , "content":"순천만 국가정원"}
+	  ]  
+
+}	

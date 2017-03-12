@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Agency - Start Bootstrap Theme</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Bungee" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <!-- Theme CSS -->
+    <link href="css/agency.css" rel="stylesheet">
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+<!--weather using-->
+
+
+<!-- GoogoleMap service start-->
+
+<script src="js/map.js"></script>
+<!-- GoogoleMap service end-->
+
+<!--크로스 도메인-->
+<script type="text/javascript" src="vendor/jquery/jquery.xdomainajax.js"></script>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <script type="text/javascript">
+    	jQuery.noConflict();
+    	var jq$ = jQuery;
+    </script>
+	
+</head>
+
+<body id="page-top" class="index">
+
+    <!-- Navigation -->
+    <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">FRIM</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#services">Services</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#search">Search</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#map">Map</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#portfolio">Photo</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#video">Video</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#weather">Weather</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#team">Team</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Review</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="intro-text">
+                <div class="intro-lead-in">FRIENDLY REAL INFOMATION MAP</div>
+                <div class="intro-heading">ENJOY FRIM</div>
+                <a href="#services" class="page-scroll btn btn-xl">시작하기</a>
+            </div>
+        </div>
+    </header>
+   
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Services</h2>
+                    <h3 class="section-subheading text-muted">FRIM의 다양한 서비스</h3>
+                </div>
+            </div>
+            
+            <div class="row text-center" id="servicesinfo">
+
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-street-view fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">Friendly</h4>
+                    <p class="text-muted">전국 어디를 가더라도 
+그 지역에 사는 친구가 알려주는 것처럼 
+인터넷에 과장된 글이 아니라 사실을 바탕의 정보를 
+제공해주는 모바일 웹 서비스 입니다
+</p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-camera-retro fa-stack-1x fa-inverse"></i>
+                    </span>
+                      <h4 class="service-heading">Real</h4>
+                    <p class="text-muted">실제 사진 업로드를 통해 
+정확한 지역정보를 제공
+</p>
+               
+                        </div>
+				<div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-search fa-stack-1x fa-inverse"></i>
+                    </span>
+                     <h4 class="service-heading">Infomation</h4>
+                    <p class="text-muted">한번의 검색을 통해 
+지도에 숙박, 음식, 여행지 정보제공
+해당 지역 날씨정보 제공
+</p>
+           
+                   </div>
+            	<div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-location-arrow fa-stack-1x fa-inverse"></i>
+                    </span>
+                      <h4 class="service-heading">Map</h4>
+                    <p class="text-muted">Google 지도를 제공하여 정확합니다.</p>
+               
+                        </div>
+            
+            </div>
+        </div>
+    
+            <!-- 캐러셀 부분 시작 -->
+    	<div id="carousel-generic" class="carousel slide" ><!-- id는 인티게이터와 슬라이드 캐러셀 콘트럴 버튼의 타깃으로 사용 -->
+     
+       
+       <!-- Carousel items(이미지) 설정 -->
+       <div class="carousel-inner">
+          <div class="item active">
+             <img src="img/2.png" alt="First slide">
+          </div>
+          <div class="item">
+             <img src="img/3.png" alt="Second slide">              
+          </div>
+          <div class="item">
+             <img src="img/4.png" alt="Third slide">               
+          </div>
+          
+                                 
+       </div>
+       
+      <!-- Controls(이전-다음 아이콘) 설정(이미지 설정) -->
+        <a class="left carousel-control" href="#carousel-generic" data-slide="prev">
+         
+        </a>
+        <a class="right carousel-control" href="#carousel-generic" data-slide="next">
+        
+        </a>
+      </div>
+      		<!--// 캐러셀 부분 끝  -->
+  
+  
+    </section>
+
+	<!-- Search Section -->
+	<section id="search">
+		<div class="container">
+		 <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">SEARCH</h2>
+                </div>
+            </div>
+         <div class="row">
+         		<div class="input">
+         			<div class= "col-lg-12 ">
+         				
+         	
+	          		<div class="input-group">
+                        <input  type="text" id = "city" class="form-control" placeholder="지역을 입력해주세요....">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button" id="searchbtn">
+                                <span class="glyphicon glyphicon-search"></span>
+                        	</button>
+                        </span>
+                    </div>
+         			</div>
+         			
+         		</div>
+         	
+         </div>
+		
+	</section>
+	
+	<!-- MAP Section -->
+	<section id="map" class="bg-light-green">
+
+		<div class="container">
+		 <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">MAP</h2>
+                </div>
+            </div>
+            
+            <div id="floating-panel">
+     
+    </div>
+    <div id="mapshow" style="width: 400px%; height: 400px"></div>
+
+		     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDL3NkhtvzhA_SCaz9gk9Q_KwjotdZEIOI&callback=initMap"></script>
+		</div>
+		
+	</section>
+    
+    <!-- PHOTO Grid Section -->
+    <section id="portfolio" class="bg-light-gray">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-12 text-center">
+
+                    <h2 class="section-heading">PHOTO</h2>
+                    <h3 class="section-subheading text-muted"> 검색내용에 따른 사진을 제공</h3>
+                </div>
+            </div>
+            <div class="row" id= "imgshow">
+                <div class="col-md-4 col-sm-6 portfolio-item">
+
+
+                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+
+                        <div class="portfolio-hover">
+
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/a.jpg" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+
+                        <h4>Round Icons</h4>
+                        <p class="text-muted">Graphic Design</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+
+                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/b.jpg" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+
+                        <h4>Startup Framework</h4>
+                        <p class="text-muted">Website Design</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/c.jpg" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Treehouse</h4>
+                        <p class="text-muted">Website Design</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/d.jpg" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Golden</h4>
+                        <p class="text-muted">Website Design</p>
+                    </div>
+                </div>
+                
+                
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/e.png" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Escape</h4>
+                        <p class="text-muted">Website Design</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="img/portfolio/d.jpg" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Dreams</h4>
+                        <p class="text-muted">Website Design</p>
+                    </div>
+                </div>
+                
+            </div>
+           
+            <div class = "add">
+            	<a class="addimg btn btn-xl">사진추가</a>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- VIDEO Section -->
+    <section id="video">       
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+
+                    <h2 class="section-heading">VIDEO</h2>
+                    <h3 class="section-subheading text-muted"> 해당화면에 따른 비디오를 보여준다</h3>
+                </div>
+            </div>
+            
+            
+            <div class="row" id="videoshow">
+                <div class="col-md-6 col-sm-12  ">
+
+                    
+                    <div class="thumbnail">
+                     <iframe src= "https://www.youtube.com/embed/kS561nIszfc" frameborder="0" allowfullscreen></iframe>
+                    </div>  
+                   
+                    <div >
+                        <h4>Round Icons</h4>
+                        <p class="text-muted">Graphic Design</p>
+                    </div>
+                    
+                </div>
+                <div class="col-md-6 col-sm-12 ">
+
+                    
+                    <div class="thumbnail">
+                     <iframe src="https://www.youtube.com/embed/rxVI6RAdSb8" frameborder="0" allowfullscreen></iframe>
+                    </div>  
+                   
+                    <div>
+                        <h4>Round Icons</h4>
+                        <p class="text-muted">Graphic Design</p>
+                    </div>
+                    
+                </div>
+                
+                <div class="col-md-6 col-sm-12 ">
+
+                    
+                    <div class="thumbnail">
+                     <iframe  src="https://www.youtube.com/embed/HdXIFdmr-7U" frameborder="0" allowfullscreen></iframe>
+                    </div>  
+                   
+                    <div >
+                        <h4>Round Icons</h4>
+                        <p class="text-muted">Graphic Design</p>
+                    </div>
+                    
+                </div>
+                
+                <div class="col-md-6 col-sm-12 ">
+
+                    
+                    <div class="thumbnail">
+                     <iframe  src="https://www.youtube.com/embed/l0unDKK56yE" frameborder="0" allowfullscreen></iframe>
+                    </div>  
+                   
+                    <div >
+                        <h4>Round Icons</h4>
+                        <p class="text-muted">Graphic Design</p>
+                    </div>
+                    
+                </div>           
+      
+          </div>
+        </div>
+      
+    </section>
+
+    <!-- WEATHER Section -->
+    <section id="weather" class="bg-light-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">WEATHER</h2>
+                    <h3 class="section-subheading text-muted"> 검색내용에 따른 날씨 제공</h3>
+                </div>
+            </div>  
+            
+          <div class="vis-weather">
+    	<div class= "row">
+    		
+    		<div class = "col-lg-6 text-center"><p class="weather-date"></p></div>
+    		<div class = "col-lg-6 text-center"><p class="weather-city"></div>
+        </div>
+        
+        <div class= "row">
+        	
+        	<div class= "col-lg-4 text-center"><h3><p class="weather-temp"></p></h3></div>
+        	<div class= "col-lg-4 text-center"><h3><p id="RN1">강수량 : ?</h3></p></div>
+        	<div class= "col-lg-4">
+        		<div class = "col-lg-6 text-center "><h3><p class="weather-state-text"></p></h3></div>
+        		<div class = "col-lg-6 text-center"><p class="weather-state-picture"></p></div>
+        		
+        		</div>
+            
+        	</div>
+        
+    </div>
+    
+    <script>
+    $(document).ready(function realTimeWeather() {
+    
+    var today = new Date();
+    var week = new Array('일','월','화','수','목','금','토');
+    var year = today.getFullYear();
+    var month = today.getMonth()+1;
+    var day = today.getDate();
+    var hours = today.getHours();
+    var minutes = today.getMinutes();
+ 	var city = $("#city").val();
+    $('.weather-date').html("<h1>" + month +"월 " + day + "일 " + week[today.getDay()]+"요일 </h1>" );
+ 	
+    /*
+     * 기상청 30분마다 발표
+     * 30분보다 작으면, 한시간 전 hours 값
+     */
+    if(minutes < 30){
+        hours = hours - 1;
+        if(hours < 0){
+            // 자정 이전은 전날로 계산
+            today.setDate(today.getDate() - 1);
+            day = today.getDate();
+            month = today.getMonth()+1;
+            year = today.getFullYear();
+            hours = 23;
+        }
+    }
+    
+    /* example
+     * 9시 -> 09시 변경 필요
+     */
+    
+    if(hours < 10) {
+        hours = '0'+hours;
+    }
+    if(month < 10) {
+        month = '0' + month;
+    }    
+    if(day < 10) {
+        day = '0' + day;
+    } 
+ 
+    today = year+""+month+""+day;
+    
+    /* 좌표  nx값이랑 ny값 미리 데이터 베이스 저장해두고 검색 결과에 따라 들어가게 설정하기 */ 
+
+   $("#searchbtn").click(function () {
+   	
+        var city = $("#city").val();
+		$('.weather-city').html("<h2>"+city+"의 현재 날씨</h2>");	 
+	if(city == '강남'){
+    var _nx = 61; 
+    var _ny = 126;	
+    }
+    
+    if(city == '수원'){
+    var _nx = 60; 
+    var _ny = 121;	
+    }
+    
+    if(city == '순천'){
+    var _nx = 70; 
+    var _ny = 70;	
+    }
+    
+    apikey = "42tn%2F2AJQK6GgJNi6sydEODrfsLgjgbCAdTEx%2B%2FUN9DOqztTbZ6tFqk%2FDsVzEpUuNUCs714cW9GhSdfOC1TKwA%3D%3D",    
+    ForecastGribURL = "http://newsky2.kma.go.kr/service/SecndSrtpdFrcstInfoService2/ForecastGrib";
+    ForecastGribURL += "?ServiceKey=" + apikey;
+    ForecastGribURL += "&base_date=" + today;
+    ForecastGribURL += "&base_time=" + hours +"00";
+    ForecastGribURL += "&nx=" + _nx + "&ny=" + _ny;
+    ForecastGribURL += "&pageNo=1&numOfRows=7";
+    ForecastGribURL += "&_type=json";
+ 
+$.ajax({
+	crossOrigin: true ,
+    url: ForecastGribURL
+    ,type: 'get'
+    ,success: function(msg) {
+ 	
+ 	 
+       var text = msg.responseText,
+      
+      
+       text = text.replace(/(<([^>]+)>)/ig,""); //HTML 태그 모두 공백으로 대체
+       console.log(text);
+		 text = '[' + text + ']';
+		
+       var json = $.parseJSON(text);
+       
+       var rain_state = json[0].response.body.items.item[1].obsrValue;
+       var rain = json[0].response.body.items.item[3].obsrValue;
+       var sky = json[0].response.body.items.item[4].obsrValue;
+       var temperature = json[0].response.body.items.item[5].obsrValue;
+        
+       $('.weather-temp').html("<h2> 현재 온도는 " + temperature.toFixed(1) + " ℃ </h2>");
+ 		$('#RN1').html("<h2> 강수량 : "+ rain +"mm</h2>");
+        
+           if(rain_state != 0) {
+               switch(rain_state) {
+                   case 1:
+                    $('.weather-state-text').html("<h2>비</h2>");
+         $('.weather-state-picture').html('<img src ="img/weatherimg/rain.png">');
+
+                       break;
+                   case 2:
+                       $('.weather-state-text').html("<h2>비/눈</h2>");
+  		 $('.weather-state-picture').html('<img src ="img/weatherimg/rain.png">');
+                       break;
+                   case 3:
+                       $('.weather-state-text').html("<h2>눈</h2>");
+                   $('.weather-state-picture').html('<img src ="img/weatherimg/snow.png">');
+                       break;
+               }
+           }else {
+               switch(sky) {
+                   case 1:
+                       $('.weather-state-text').html("<h2>맑음</h2>");
+                     $('.weather-state-picture').html('<img src ="img/weatherimg/sunny.png">');
+                       break;
+                   case 2:
+                       $('.weather-state-text').html("<h2>구름조금</h2>");
+               $('.weather-state-picture').html('<img src ="img/weatherimg/blue.png">');
+                       break;
+                   case 3:
+                    $('.weather-state-text').html("<h2>구름많음</h2>");
+                	$('.weather-state-picture').html('<img src ="img/weatherimg/manycloud.png">');
+
+                       break;
+                   case 4:
+                    $('.weather-state-text').html("<h2>흐림</h2>");    
+                   $('.weather-state-picture').html('<img src ="img/weatherimg/dark.png">');
+                     
+                       break;
+                   }    
+               }
+        } 
+    });    
+});
+});
+</script>
+  <!--
+	<script src="vendor/jquery/jquery.xdomainajax.js"></script>
+	<script src="js/weather.js"></script>
+-->
+
+          </div>
+    </section>
+    <!--날씨 스크립트 -->
+   
+    <!-- Team Section -->
+    <section id="team">
+        
+            <div class="row">
+                <div class="col-sm-6 col-xs-12">
+                    <div class="team-member">
+                        <img src="img/team/sim.png" class="img-responsive img-circle" alt="">
+                        <h4>SIM HWAN GI</h4>
+                        <p class="text-muted">개발자</p>
+                        <ul class="list-inline social-buttons">
+
+                            <li><a href="https://www.instagram.com/faaaang_gi/"> <i class="fa fa-instagram" ></i></a>
+                            </li>
+                            <li><a href="https://www.facebook.com/hwangi.sim"> <i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li><a id = "detailsim"><i class="fa fa-linkedin"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-xs-12">
+                    <div class="team-member">
+                        <img src="img/team/lee.png" class="img-responsive img-circle" alt="">
+                        <h4>LEE DONG JUN</h4>
+                        <p class="text-muted">개발자</p>
+                        <ul class="list-inline social-buttons">
+                            <li><a href="https://www.instagram.com/dj_33412/"> <i class="fa fa-instagram "></i></a>
+                            </li>
+                            <li><a href="https://www.facebook.com/dongjoon.lee.54?fref=ts"> <i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li><a id="detaillee"><i class="fa fa-linkedin"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+               
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <p class="large text-muted">FRIM 개발자 소개</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Review</h2>
+                    <h3 class="section-subheading text-muted">여러 사용자들과 사용후기를 나눕니다</h3>
+                </div>
+            </div>
+            <div class="row" id ="mainreview">
+            <!-- 추가할곳 -->    
+                
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <span class="copyright">Copyright &copy; FRIM 2016</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Portfolio Modals -->
+   
+    <!-- Portfolio Modal 1 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+
+                    <div class="row">
+
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here -->
+                                <h2>수원 화성</h2>
+                                <p class="item-intro text-muted">경기도 수원시에 위치해 있는 수원 화성입니다.</p>
+                                <img class="img-responsive img-centered" src="img/portfolio/hwasung.jpg" alt="">
+                                <p>화성은 경기도 수원에 있는 조선 시대의 성곽이다. 처음부터 계획하여 거주지로서의 읍성과 방어용 산성을 합하여 성곽도시로 만들었다. 전통적인 축성 기법에 과학적 기술을 활용하였으며, 이전의 성곽에 흔치 않았던 다양한 방어용 시설을 많이 첨가하였다. 주변 지형에 맞춰 자연스럽게 조성한 아름다움을 볼 수 있다
+
+</p>
+                                <p>
+                                 <ul class="list-inline">
+                                    <li>구분 : 유네스코 세계유산</li>
+                                    <li>국가 : 대한민국</li>
+                                    <li>등재년도 : 1997년</li>
+                                </ul>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> 닫기</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Modal 2 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <h2>Project Heading</h2>
+                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                <img class="img-responsive img-centered" src="img/portfolio/startup-framework-preview.png" alt="">
+                                <p><a href="http://designmodo.com/startup/?u=787">Startup Framework</a> is a website builder for professionals. Startup Framework contains components and complex blocks (PSD+HTML Bootstrap themes and templates) which can easily be integrated into almost any design. All of these components are made in the same style, and can easily be integrated into projects, allowing you to create hundreds of solutions for your future projects.</p>
+                                <p>You can preview Startup Framework <a href="http://designmodo.com/startup/?u=787">here</a>.</p>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Modal 3 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here -->
+                                <h2>Project Name</h2>
+                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                <img class="img-responsive img-centered" src="img/portfolio/treehouse-preview.png" alt="">
+                                <p>Treehouse is a free PSD web template built by <a href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>. This is bright and spacious design perfect for people or startup companies looking to showcase their apps or other projects.</p>
+                                <p>You can download the PSD template in this portfolio sample item at <a href="http://freebiesxpress.com/gallery/treehouse-free-psd-web-template/">FreebiesXpress.com</a>.</p>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Modal 4 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here -->
+                                <h2>Project Name</h2>
+                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                <img class="img-responsive img-centered" src="img/portfolio/golden-preview.png" alt="">
+                                <p>Start Bootstrap's Agency theme is based on Golden, a free PSD website template built by <a href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>. Golden is a modern and clean one page web template that was made exclusively for Best PSD Freebies. This template has a great portfolio, timeline, and meet your team sections that can be easily modified to fit your needs.</p>
+                                <p>You can download the PSD template in this portfolio sample item at <a href="http://freebiesxpress.com/gallery/golden-free-one-page-web-template/">FreebiesXpress.com</a>.</p>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Modal 5 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here -->
+                                <h2>Project Name</h2>
+                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                <img class="img-responsive img-centered" src="img/portfolio/escape-preview.png" alt="">
+                                <p>Escape is a free PSD web template built by <a href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>. Escape is a one page web template that was designed with agencies in mind. This template is ideal for those looking for a simple one page solution to describe your business and offer your services.</p>
+                                <p>You can download the PSD template in this portfolio sample item at <a href="http://freebiesxpress.com/gallery/escape-one-page-psd-web-template/">FreebiesXpress.com</a>.</p>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+  <!-- Portfolio Modal 6 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                
+                                <!-- Project Details Go Here -->
+                                <h2>Project Name</h2>
+                                <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
+                                <img class="img-responsive img-centered" src="img/portfolio/dreams-preview.png" alt="">
+                                <p>Dreams is a free PSD web template built by <a href="https://www.behance.net/MathavanJaya">Mathavan Jaya</a>. Dreams is a modern one page web template designed for almost any purpose. It’s a beautiful template that’s designed with the Bootstrap framework in mind.</p>
+                                <p>You can download the PSD template in this portfolio sample item at <a href="http://freebiesxpress.com/gallery/dreams-free-one-page-web-template/">FreebiesXpress.com</a>.</p>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    
+
+
+	<!-- detail sim -->
+	<div class="modal fade" id="exsim" data-backdrop="static">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button class="close" data-dismiss="modal">&times;</button>		
+					<h4 class="modal-title">심환기 설명</h4>				
+				</div>
+				<div class="modal-body">
+					심환기입니다<p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" data-dismiss="modal">닫기</button>	
+				</div>			
+			</div>			
+		</div>		
+	</div>
+
+	<!-- detail lee -->
+	<div class="modal fade" id="exlee" data-backdrop="static">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button class="close" data-dismiss="modal">&times;</button>		
+					<h4 class="modal-title">이동준 설명</h4>				
+				</div>
+				<div class="modal-body">
+					이동준 입니다<p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" data-dismiss="modal">닫기</button>	
+				</div>			
+			</div>			
+		</div>		
+	</div>
+
+	
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="js/agency.js"></script>
+    <script src="js/city.js"></script>
+  
+   
+    <script>
+        
+        /* 캐러셀을 작동하기 위한 스크립트 선언 */
+      	$('.carousel').carousel();
+      	$('.carousel2').carousel({interval: 500 }); 
+    </script>
+   
+    <!-- DETAIL MODAL -->
+   
+    <script type="text/javascript">
+  $(window).resize(function(){resizeYoutube();});
+  $(function(){resizeYoutube();});
+  function resizeYoutube(){ $("iframe").each(function(){ if( /^https?:\/\/www.youtube.com\/embed\//g.test($(this).attr("src")) ){ $(this).css("width","100%"); $(this).css("height",Math.ceil( parseInt($(this).css("width")) * 480 / 854 ) + "px");} }); }
+	</script>
+
+</body>
+
+</html>
+

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Simple markers</title>
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        height: 50%;
+      }
+    </style>
+    
+   <script src="//code.jquery.com/jquery.min.js"></script>
+    
+      <script>
+
+function initMap() {
+  var myLatLng = {lat: 37.497942, lng: 127.027600};
+   
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 15,
+    center: myLatLng
+  });
+
+  var marker = new google.maps.Marker({
+    position: myLatLng,
+    map: map,
+    title: 'Hello World!'
+  });
+}
+
+    </script>
+    
+    <script>
+     $(document).ready(function(){
+    	 $('#btn1').click(function(){
+    		 var data = $('#search_region').val();
+    		 console.log(data);
+    	 });
+     });
+    </script>
+  </head>
+  
+  <body>
+    <div>
+      <center>
+        Frim 프로젝트!! 꼭 성공하자!
+      </center>
+    </div>
+    <div id="map"></div>
+    <div>
+       <input type = "text" id = "search_region"/>
+       <button id = "btn1">조회</button>
+    </div>
+     <div> 
+            이미지 업로드
+        <input type = "file" value="사진"/>
+        <div id = "picture"></div>
+     </div>
+     <div>
+       
+     </div>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWRu7DlgCZh6KSsu5griPDWqx0UvL_eqA&callback=initMap"></script>
+  </body>
+</html>
